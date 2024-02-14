@@ -7,3 +7,4 @@
 -- })
 --
 vim.opt.scrolloff = 8
+vim.opt_global.hls = false
