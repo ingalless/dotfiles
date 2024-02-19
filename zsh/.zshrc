@@ -28,6 +28,9 @@ alias clip="xclip -selection c"
 alias gdone="git-close-branch"
 alias bb="bitbucket-helpers"
 alias n="nb"
+alias ls="eza"
+alias ll="eza -lh"
+alias tree="eza -aT"
 
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/scripts:$PATH
