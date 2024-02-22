@@ -1,3 +1,8 @@
+# Configure Jira CLI
+# Put the below in .zprofile or .zshenv
+# export JIRA_URL='https://org.atlassian.net'
+# export JIRA_API_TOKEN=""
+
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="refined"
@@ -51,8 +56,3 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
-# Configure Jira CLI
-# in this file put:
-# export JIRA_URL='https://mondago.atlassian.net'
-# export JIRA_API_TOKEN=""
-source "$HOME/.zshjira"

@@ -25,6 +25,15 @@ You have two folders to stow, namely:
 stow nvim nvim-overrides
 ```
 
+## ZSH
+
+Configure environment variables in `.zshenv` or `.zprofile`
+
+```bash
+export JIRA_URL='https://org.atlassian.net'
+export JIRA_API_TOKEN=""
+```
+
 ## Tools to install
 
 * [zsh](https://ohmyz.sh/)
