@@ -35,36 +35,38 @@ Example:
 	bitbucket-helpers clone repo-name
 "
 
-COMMAND=$1
-ORG=mondagodevelopment
+ORG=$1
+COMMAND=$2
 case "$COMMAND" in
 	"clone")
-		REPO=$2
+		REPO=$3
 		if [[ -z "$REPO" ]]; then
 			echo "$cloneUsage"
 			exit
 		fi
-		git clone https://jingall@bitbucket.org/mondagodevelopment/$2.git
+		git clone "https://jingall@bitbucket.org/$ORG/$REPO.git"
 		;;
 	"jira")
-		JIRA=$(git branch --show-current)
-		if ! [ -x "$(command -v jira)" ]; then
-			echo 'Warn: jira cli is not installed. We will open the issue in a browser instead. You can download it at https://github.com/ankitpokhrel/jira-cli'
-			xdg-open "https://mondago.atlassian.net/browse/$JIRA" &> /dev/null
-		else
-			jira issue view $JIRA
-		fi
+    echo "For now, this does not work. I need to make it configurable"
+    exit
+		# JIRA=$(git branch --show-current)
+		# if ! [ -x "$(command -v jira)" ]; then
+		# 	echo 'Warn: jira cli is not installed. We will open the issue in a browser instead. You can download it at https://github.com/ankitpokhrel/jira-cli'
+		# 	xdg-open "https://<org>.atlassian.net/browse/$JIRA" &> /dev/null
+		# else
+		# 	jira issue view $JIRA
+		# fi
 		;;
 	
 	"start")
-		BRANCH=$3
+		BRANCH=$4
 		if [[ -z "$BRANCH" ]]; then
 			echo "$startUsage"
 			exit
 		fi
 		git pull
 		git fetch -a
-		git checkout -b $2
+		git checkout -b $3
 		;;
 	"pull")
 		git pull
@@ -73,7 +75,7 @@ case "$COMMAND" in
 		;;
 	"commit")
 		SOURCE=$(git branch --show-current)
-		COMMIT=$2
+		COMMIT=$3
 		if [[ -z "$COMMIT" ]]; then
 			echo "$commitUsage"
 			exit
@@ -83,12 +85,11 @@ case "$COMMAND" in
 	"pr")
 		REPO=${PWD##*/} 
 		SOURCE=$(git branch --show-current)
-		# https://bitbucket.org/mondagodevelopment/c-panel/pull-requests/new?source=fix-registry&t=1
 		xdg-open "https://bitbucket.org/$ORG/$REPO/pull-request/new?source=$SOURCE&t=1" &> /dev/null
 		;;
 
 	"open")
-		REPO=$2
+		REPO=$3
 		xdg-open https://bitbucket.org/$ORG/$REPO &> /dev/null
 		;;
 
