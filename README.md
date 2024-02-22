@@ -1,24 +1,21 @@
 # Jonny's Dotfiles
 
-> Heavily inspired by [this](https://github.com/freekmurze/dotfiles)
-
-To install clone the repository to `.dotfiles` in your home directory, then run the bootstrap script:
+To install clone the repository to somewhere in your home directory
 
 ```sh
-git clone https://github.com/ingalless/dotfiles.git .dotfiles
-cd .dotfiles
-./bootstrap
+git clone https://github.com/ingalless/dotfiles.git
+cd dotfiles
 ```
 
 ## Usage
 
 Use GNU Stow to set things up.
 ```bash
-# Example
-stow bin
+# Example setup for scripts, nvim and tmux
+stow bin nvim tmux
 ```
 
-## Neovim stowing notes
+## Neovim
 
 You have two folders to stow, namely:
 * nvim
