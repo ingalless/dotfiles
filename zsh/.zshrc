@@ -29,7 +29,7 @@ alias dcd="docker compose down"
 alias dlog="docker container logs -f"
 alias dcls="docker container ls"
 alias dc="docker compose"
-alias e="$EDITOR"
+alias e="exit"
 alias c="composer"
 alias clip="xclip -selection c"
 alias gdone="git-close-branch"
@@ -44,6 +44,9 @@ export PATH=$HOME/.local/scripts:$PATH
 export PATH=$HOME/.dotnet/tools:$PATH
 export PATH=$HOME/.local/lua-language-server/bin:$PATH
 export PATH=$HOME/.dotnet:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.local/share/bob/nvim-bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 
 # bun completions
 [ -s "/home/ingalless/.bun/_bun" ] && source "/home/ingalless/.bun/_bun"
