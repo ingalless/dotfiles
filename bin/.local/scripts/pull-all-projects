@@ -1,0 +1,10 @@
+#!/bin/bash
+
+folders=$(find ~/projects ~/work ~/personal -mindepth 1 -maxdepth 1 -type d)
+
+echo "$folders"
+
+for folder in `find ~/projects ~/work ~/personal -mindepth 1 -maxdepth 1 -type d`; do
+	cd "$folder"
+	git pull
+done
