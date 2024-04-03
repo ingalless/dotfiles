@@ -18,7 +18,7 @@ stow bin nvim tmux
 ## Neovim
 
 ```bash
-stow nvim nvim-overrides
+stow nvim
 ```
 
 ## ZSH
