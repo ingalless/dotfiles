@@ -17,10 +17,6 @@ stow bin nvim tmux
 
 ## Neovim
 
-You have two folders to stow, namely:
-* nvim
-* nvim-overrides
-
 ```bash
 stow nvim nvim-overrides
 ```
