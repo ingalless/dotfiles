@@ -286,6 +286,7 @@ require('lazy').setup({
         ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
         ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
         ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+        ['<leader>q'] = { name = '[Q]uickfix', _ = 'which_key_ignore' },
       }
     end,
   },
@@ -862,3 +863,6 @@ require('lazy').setup({
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+vim.keymap.set('n', '<leader>qj', vim.cmd.cnext, { desc = 'Next entry in quickfix list' })
+vim.keymap.set('n', '<leader>qk', vim.cmd.cprevious, { desc = 'Next entry in quickfix list' })
