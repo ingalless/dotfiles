@@ -866,3 +866,4 @@ require('lazy').setup({
 
 vim.keymap.set('n', '<leader>qj', vim.cmd.cnext, { desc = 'Next entry in quickfix list' })
 vim.keymap.set('n', '<leader>qk', vim.cmd.cprevious, { desc = 'Next entry in quickfix list' })
+vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open file explorer in current directory' })
