@@ -736,15 +736,15 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'ellisonleao/gruvbox.nvim',
+    'neanias/everforest-nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
-      require('gruvbox').setup {
-        contrast = 'hard',
+      require('everforest').setup {
+        background = 'hard',
       }
       -- Load the colorscheme here.
       vim.o.background = 'light'
-      vim.cmd.colorscheme 'gruvbox'
+      vim.cmd.colorscheme 'everforest'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
