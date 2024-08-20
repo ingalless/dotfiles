@@ -1,3 +1,19 @@
+local function getOS()
+	local osname = ""
+	-- ask LuaJIT first
+	if jit then
+		return jit.os
+	end
+
+	-- Unix, Linux variants
+	local fh, err = assert(io.popen("uname -o 2>/dev/null", "r"))
+	if fh then
+		osname = fh:read()
+	end
+
+	return osname or "Windows"
+end
+
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 
@@ -12,6 +28,10 @@ config.font = wezterm.font("Iosevka Nerd Font Mono")
 config.font_size = 16
 config.enable_tab_bar = false
 config.cell_width = 0.9
+
+if getOS() == "Windows" then
+	config.default_prog = { "powershell.exe" }
+end
 
 -- and finally, return the configuration to wezterm
 return config
