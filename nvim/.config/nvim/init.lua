@@ -648,11 +648,11 @@ require('lazy').setup({
           --    https://github.com/rafamadriz/friendly-snippets
           -- {
           --   'rafamadriz/friendly-snippets',
-          --   config = function()
-          --     require('luasnip.loaders.from_vscode').lazy_load()
-          --   end,
           -- },
         },
+        config = function()
+          require('luasnip.loaders.from_snipmate').lazy_load { paths = '~/.config/nvim/snippets' }
+        end,
       },
       'saadparwaiz1/cmp_luasnip',
 
@@ -736,15 +736,15 @@ require('lazy').setup({
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'sainnhe/edge',
+    'folke/tokyonight.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- require('everforest').setup {
       --   background = 'hard',
       -- }
       -- Load the colorscheme here.
-      vim.o.background = 'light'
-      vim.cmd.colorscheme 'edge'
+      vim.o.background = 'dark'
+      vim.cmd.colorscheme 'tokyonight-moon'
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'

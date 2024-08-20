@@ -1,3 +1,8 @@
 nvim/plugin
 tags
 .luarc.json
+
+# The below need to be made more general
+# perhaps through env variables
+bin/.local/scripts/ucptest
+bin/.local/scripts/tokenpls

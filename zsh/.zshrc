@@ -18,6 +18,7 @@ export BROWSER='/usr/bin/google-chrome-stable'
 
 alias v="nvim"
 alias v.="nvim ."
+alias vim="nvim"
 alias art="php artisan"
 alias ts="tmux-sessionizer"
 alias zs="zed-sessionizer"
@@ -39,6 +40,7 @@ alias n="nb"
 alias ls="eza"
 alias ll="eza -lh"
 alias tree="eza -aT"
+alias lg="lazygit"
 
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.local/scripts:$PATH
@@ -59,3 +61,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+export NVIM_APPNAME="nvim"
