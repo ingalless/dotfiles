@@ -1,19 +1,3 @@
-local function getOS()
-	local osname = ""
-	-- ask LuaJIT first
-	if jit then
-		return jit.os
-	end
-
-	-- Unix, Linux variants
-	local fh, err = assert(io.popen("uname -o 2>/dev/null", "r"))
-	if fh then
-		osname = fh:read()
-	end
-
-	return osname or "Windows"
-end
-
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
 
@@ -29,9 +13,9 @@ config.font_size = 16
 config.enable_tab_bar = false
 config.cell_width = 0.9
 
-if getOS() == "Windows" then
-	config.default_prog = { "powershell.exe" }
-end
+-- Fix alt key behaviour
+config.send_composed_key_when_left_alt_is_pressed = true
+config.send_composed_key_when_right_alt_is_pressed = true
 
 -- and finally, return the configuration to wezterm
 return config
