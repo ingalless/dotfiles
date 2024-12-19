@@ -13,6 +13,7 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='nvim'
 export BROWSER='/usr/bin/google-chrome-stable'
+export MANWIDTH=120
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -62,3 +63,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export NVIM_APPNAME="nvim"
+. "/Users/IngaJo/.deno/env"
