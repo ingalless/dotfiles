@@ -52,15 +52,14 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.local/share/bob/nvim-bin:$PATH
 export PATH=/opt/homebrew/bin:$PATH
 
-# bun completions
-[ -s "/home/ingalless/.bun/_bun" ] && source "/home/ingalless/.bun/_bun"
-
 # bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+#   completions
+# [ -s "/home/ingalless/.bun/_bun" ] && source "/home/ingalless/.bun/_bun"
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
 
 # volta
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export NVIM_APPNAME="nvim"
-. "/Users/IngaJo/.deno/env"
+# . "/Users/IngaJo/.deno/env"
