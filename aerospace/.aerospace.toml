@@ -8,29 +8,29 @@ enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
 [mode.main.binding]
-alt-enter = 'exec-and-forget open -n /Applications/kitty.app'
+cmd-ctrl-alt-enter = 'exec-and-forget open -n /Applications/WezTerm.app'
 
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
+cmd-ctrl-alt-a = 'focus left'
+cmd-ctrl-alt-s = 'focus down'
+cmd-ctrl-alt-w = 'focus up'
+cmd-ctrl-alt-d = 'focus right'
 
-alt-shift-h = 'move left'
-alt-shift-j = 'move down'
-alt-shift-k = 'move up'
-alt-shift-l = 'move right'
+cmd-ctrl-alt-shift-a = 'move left'
+cmd-ctrl-alt-shift-s = 'move down'
+cmd-ctrl-alt-shift-w = 'move up'
+cmd-ctrl-alt-shift-d = 'move right'
 
 # Consider using 'join-with' command as a 'split' replacement if you want to enable normalizations
-alt-backslash = 'split horizontal'
-alt-v = 'split vertical'
+cmd-ctrl-alt-backslash = 'split horizontal'
+cmd-ctrl-alt-v = 'split vertical'
 
-alt-f = 'fullscreen'
+cmd-ctrl-alt-f = 'fullscreen'
 
-alt-s = 'layout v_accordion' # 'layout stacking' in i3
-alt-w = 'layout h_accordion' # 'layout tabbed' in i3
-alt-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
+cmd-ctrl-alt-z = 'layout v_accordion' # 'layout stacking' in i3
+cmd-ctrl-alt-x = 'layout h_accordion' # 'layout tabbed' in i3
+cmd-ctrl-alt-c = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
 
-alt-shift-space = 'layout floating tiling' # 'floating toggle' in i3
+cmd-ctrl-alt-shift-space = 'layout floating tiling' # 'floating toggle' in i3
 
 # Not supported, because this command is redundant in AeroSpace mental model.
 # See: https://nikitabobko.github.io/AeroSpace/guide#floating-windows
@@ -40,31 +40,31 @@ alt-shift-space = 'layout floating tiling' # 'floating toggle' in i3
 # should be supported at all https://github.com/nikitabobko/AeroSpace/issues/5
 # cmd-a = 'focus parent'
 
-cmd-1 = 'workspace 1'
-cmd-2 = 'workspace 2'
-cmd-3 = 'workspace 3'
-cmd-4 = 'workspace 4'
-cmd-5 = 'workspace 5'
-cmd-6 = 'workspace 6'
-cmd-7 = 'workspace 7'
-cmd-8 = 'workspace 8'
-cmd-9 = 'workspace 9'
-cmd-0 = 'workspace 10'
+cmd-ctrl-alt-1 = 'workspace 1'
+cmd-ctrl-alt-2 = 'workspace 2'
+cmd-ctrl-alt-3 = 'workspace 3'
+cmd-ctrl-alt-4 = 'workspace 4'
+cmd-ctrl-alt-5 = 'workspace 5'
+cmd-ctrl-alt-6 = 'workspace 6'
+cmd-ctrl-alt-7 = 'workspace 7'
+cmd-ctrl-alt-8 = 'workspace 8'
+cmd-ctrl-alt-9 = 'workspace 9'
+cmd-ctrl-alt-0 = 'workspace 10'
 
-cmd-alt-1 = 'move-node-to-workspace 1'
-cmd-alt-2 = 'move-node-to-workspace 2'
-cmd-alt-3 = 'move-node-to-workspace 3'
-cmd-alt-4 = 'move-node-to-workspace 4'
-cmd-alt-5 = 'move-node-to-workspace 5'
-cmd-alt-6 = 'move-node-to-workspace 6'
-cmd-alt-7 = 'move-node-to-workspace 7'
-cmd-alt-8 = 'move-node-to-workspace 8'
-cmd-alt-9 = 'move-node-to-workspace 9'
-cmd-alt-0 = 'move-node-to-workspace 10'
+cmd-ctrl-alt-shift-1 = 'move-node-to-workspace 1'
+cmd-ctrl-alt-shift-2 = 'move-node-to-workspace 2'
+cmd-ctrl-alt-shift-3 = 'move-node-to-workspace 3'
+cmd-ctrl-alt-shift-4 = 'move-node-to-workspace 4'
+cmd-ctrl-alt-shift-5 = 'move-node-to-workspace 5'
+cmd-ctrl-alt-shift-6 = 'move-node-to-workspace 6'
+cmd-ctrl-alt-shift-7 = 'move-node-to-workspace 7'
+cmd-ctrl-alt-shift-8 = 'move-node-to-workspace 8'
+cmd-ctrl-alt-shift-9 = 'move-node-to-workspace 9'
+cmd-ctrl-alt-shift-0 = 'move-node-to-workspace 10'
 
-alt-shift-c = 'reload-config'
+cmd-ctrl-alt-shift-c = 'reload-config'
 
-alt-r = 'mode resize'
+cmd-ctrl-alt-r = 'mode resize'
 
 [mode.resize.binding]
 h = 'resize width -50'
