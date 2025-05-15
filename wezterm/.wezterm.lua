@@ -7,8 +7,10 @@ local config = wezterm.config_builder()
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = "Gruvbox Dark (Gogh)"
-config.font = wezterm.font("Iosevka Nerd Font Mono")
+config.color_scheme = "OneDark (base16)"
+-- config.color_scheme = "One Light (Gogh)"
+-- config.font = wezterm.font("Iosevka Nerd Font Mono")
+config.font = wezterm.font("JetBrainsMono NF")
 config.font_size = 18
 config.enable_tab_bar = false
 config.cell_width = 0.9

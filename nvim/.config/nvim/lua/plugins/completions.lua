@@ -1,10 +1,14 @@
 return {
   {
     'saghen/blink.cmp',
-    dependencies = 'rafamadriz/friendly-snippets',
+    dependencies = { 'L3MON4D3/LuaSnip', version = 'v2.*' },
     version = 'v0.*',
     opts = {
       keymap = { preset = 'default' },
+      snippets = { preset = 'luasnip' },
+      sources = {
+        default = { 'lsp', 'path', 'snippets', 'buffer' },
+      },
 
       appearance = {
         -- Sets the fallback highlight groups to nvim-cmp's highlight groups
