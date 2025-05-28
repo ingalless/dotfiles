@@ -23,6 +23,7 @@ return {
         stop_after_first = true,
         javascript = { 'prettierd', 'prettier' },
         typescript = { 'prettierd', 'prettier' },
+        markdown = { 'prettierd', 'prettier' },
       },
     },
   },
