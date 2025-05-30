@@ -8,3 +8,5 @@ bin/.local/scripts/ucptest
 bin/.local/scripts/tokenpls
 
 .DS_Store
+
+fish/.config/fish/fish_variables

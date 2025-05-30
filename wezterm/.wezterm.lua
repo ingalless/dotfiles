@@ -5,7 +5,6 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- Spawn a fish shell in login mode
-config.default_prog = { "/opt/homebrew/bin/fish", "-l" }
 
 -- This is where you actually apply your config choices
 
