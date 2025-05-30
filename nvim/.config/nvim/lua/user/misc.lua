@@ -1,3 +1,10 @@
+-- [[ Filetype additions ]]
+vim.filetype.add {
+  pattern = {
+    ['.*%.blade%.php'] = 'php',
+  },
+}
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
