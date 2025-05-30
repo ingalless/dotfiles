@@ -37,6 +37,7 @@ abbr --add gc "git commit"
 abbr --add ga "git add"
 abbr --add gd "git diff"
 abbr --add gb "git branch"
+abbr --add gp "git push"
 abbr --add gst "git status"
 
 fish_add_path $HOME/.local/bin
