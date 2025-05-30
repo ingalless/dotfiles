@@ -12,4 +12,5 @@ fi
 
 selected_name=$(basename "$selected" | tr . _)
 
+cd $selected
 zellij attach --create $selected_name options --default-cwd $selected

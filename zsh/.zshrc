@@ -22,10 +22,10 @@ alias v.="nvim ."
 alias vim="nvim"
 alias art="php artisan"
 alias ts="tmux-sessionizer"
-alias zs="zed-sessionizer"
+# alias zs="zed-sessionizer"
 alias ta="tmux attach"
-# alias zs="zellij-sessionizer"
-# alias za="zellij attach"
+alias zs="zellij-sessionizer"
+alias za="zellij attach"
 alias dcu="docker compose up -d"
 alias dcd="docker compose down"
 # alias dce="docker exec -it"
@@ -62,4 +62,7 @@ export PATH=/opt/homebrew/bin:$PATH
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export NVIM_APPNAME="nvim"
-# . "/Users/IngaJo/.deno/env"
+
+# Zellij sessionizer binding
+bindkey -s ^f "zellij-sessionizer\n"
+
