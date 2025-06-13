@@ -1,8 +1,3 @@
-# Configure Jira CLI
-# Put the below in .zprofile or .zshenv
-# export JIRA_URL='https://org.atlassian.net'
-# export JIRA_API_TOKEN=""
-
 set -gx EDITOR 'nvim'
 set -gx MANWIDTH 120
 set -g fish_greeting
@@ -56,3 +51,4 @@ set -gx PATH "$VOLTA_HOME/bin:$PATH"
 # Zellij sessionizer binding
 # bindkey -s ^f "zellij-sessionizer\n"
 
+source $HOME/.ji.fish

@@ -4,18 +4,18 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
--- Spawn a fish shell in login mode
+local selected_theme = os.getenv("JI_THEME") == nil and os.getenv("JI_THEME") or "dark"
 
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
--- config.color_scheme = "OneDark (base16)"
+-- config.color_scheme = "nightfox"
 config.color_scheme = "dawnfox"
--- config.font = wezterm.font("Iosevka Nerd Font Mono")
-config.font = wezterm.font("JetBrainsMono NF")
+config.font = wezterm.font("Iosevka Nerd Font Mono")
+-- config.font = wezterm.font("JetBrainsMono NF")
 config.font_size = 18
+config.line_height = 1.2
 config.enable_tab_bar = false
-config.cell_width = 0.85
 config.window_padding = {
 	left = 16,
 	right = 16,

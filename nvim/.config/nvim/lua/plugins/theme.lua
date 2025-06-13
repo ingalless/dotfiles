@@ -1,19 +1,25 @@
-return {
-  { -- You can easily change to a different colorscheme.
-    -- Change the name of the colorscheme plugin below, and then
-    -- change the command in the config to whatever the name of that colorscheme is.
-    --
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    -- 'ellisonleao/gruvbox.nvim',
-    'EdenEast/nightfox.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
+local themes = {
+  dark = {
+    pkg = 'EdenEast/nightfox.nvim',
     init = function()
-      -- Load the colorscheme here.
+      vim.o.background = 'dark'
+      vim.cmd.colorscheme 'nightfox'
+    end,
+  },
+  light = {
+    pkg = 'EdenEast/nightfox.nvim',
+    init = function()
       vim.o.background = 'light'
       vim.cmd.colorscheme 'dawnfox'
-
-      -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
     end,
+  },
+}
+local selected = themes.light
+
+return {
+  {
+    selected.pkg,
+    priority = 1000, -- Make sure to load this before all the other start plugins.
+    init = selected.init,
   },
 }
