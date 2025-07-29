@@ -9,6 +9,7 @@ alias ts "tmux-sessionizer"
 alias ta "tmux attach"
 alias zs "zellij-sessionizer"
 alias za "zellij attach"
+alias cs "zed-sessionizer"
 alias e "exit"
 alias n "nb"
 alias ls "eza"
@@ -52,3 +53,6 @@ set -gx PATH "$VOLTA_HOME/bin:$PATH"
 # bindkey -s ^f "zellij-sessionizer\n"
 
 source $HOME/.ji.fish
+
+# opencode
+fish_add_path /Users/IngaJo/.opencode/bin

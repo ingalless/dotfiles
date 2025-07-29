@@ -9,12 +9,13 @@ local selected_theme = os.getenv("JI_THEME") == nil and os.getenv("JI_THEME") or
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
--- config.color_scheme = "nightfox"
-config.color_scheme = "dawnfox"
+config.color_scheme = "nightfox"
+-- config.color_scheme = "dawnfox"
 config.font = wezterm.font("Iosevka Nerd Font Mono")
 -- config.font = wezterm.font("JetBrainsMono NF")
 config.font_size = 18
 config.line_height = 1.2
+config.cell_width = 0.9
 config.enable_tab_bar = false
 config.window_padding = {
 	left = 16,

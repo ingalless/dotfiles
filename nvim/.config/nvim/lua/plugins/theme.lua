@@ -14,7 +14,7 @@ local themes = {
     end,
   },
 }
-local selected = themes.light
+local selected = themes.dark
 
 return {
   {
