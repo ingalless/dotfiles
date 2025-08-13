@@ -4,6 +4,11 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Set a pretty window border
+vim.opt.winborder = 'rounded'
+
+vim.o.swapfile = false
+
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
 
