@@ -7,9 +7,21 @@ git clone https://github.com/ingalless/dotfiles.git
 cd dotfiles
 ```
 
+## Current Tools
+
+| Category       | Tool      |
+| -------------- | --------- |
+| OS             | MacOS     |
+| Window Manager | Aerospace |
+| Shell          | Fish      |
+| Terminal       | Alacritty |
+| Editor         | Neovim    |
+| Multiplexer    | tmux      |
+
 ## Usage
 
 Use GNU Stow to set things up.
+
 ```bash
 # Example setup for scripts, nvim and tmux
 stow bin nvim tmux
@@ -21,26 +33,25 @@ stow bin nvim tmux
 stow nvim
 ```
 
-## ZSH
+## Fish
 
-Configure environment variables in `.zshenv` or `.zprofile`
+Configure environment-specific variables in `.ji.fish`
 
-```bash
-export JIRA_URL='https://org.atlassian.net'
-export JIRA_API_TOKEN=""
+```fish
+set -gx MY_SPECIAL_VAR "some value"
 ```
 
 ## Tools to install
 
-* [zsh](https://ohmyz.sh/)
-* [stow](https://www.gnu.org/software/stow/)
-* Neovim (maybe use [bob](https://github.com/MordechaiHadad/bob)?)
-    * Once neovim is installed and configured, [Mason](https://github.com/williamboman/mason.nvim) handles installing LSPs.
-* [tmux](https://github.com/tmux/tmux/wiki/Installing) (but I wouldn't mind trying [zellij](https://github.com/zellij-org/zellij))
-* [Volta](https://volta.sh/)
-* [ripgrep](https://github.com/BurntSushi/ripgrep)
-* [fzf](https://github.com/junegunn/fzf)
-* [cargo-binstall](https://github.com/cargo-bins/cargo-binstall)
-    * eza
-    * gitui
-    * bat
+- [fish](https://fishshell.com/)
+- [stow](https://www.gnu.org/software/stow/)
+- Neovim (using [bob](https://github.com/MordechaiHadad/bob))
+  - Manually install missing LSPs
+- [tmux](https://github.com/tmux/tmux/wiki/Installing)
+- [Volta for Node version management](https://volta.sh/)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [fzf](https://github.com/junegunn/fzf)
+- [cargo-binstall](https://github.com/cargo-bins/cargo-binstall)
+  - eza (ls replacement)
+  - gitui
+  - bat
