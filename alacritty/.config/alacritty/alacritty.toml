@@ -2,7 +2,8 @@
 TERM = "screen-256color"
 
 [font]
-size = 16
+size = 18
+offset.y = 6
 
 # [font.bold]
 # style = "Bold"
@@ -121,12 +122,12 @@ mode = "~Search"
 mods = "Command"
 
 [window]
-opacity = 0.9
-# decorations = "none"
+# opacity = 0.9
+decorations = "Buttonless"
 dynamic_padding = false
 
 [window.padding]
-x = 0
+x = 4
 y = 0
 
 [general]

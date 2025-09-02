@@ -9,4 +9,4 @@ local themes = {
   },
 }
 
-return themes.vague
+return themes.nightfox
