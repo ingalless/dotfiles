@@ -27,7 +27,12 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 })
 
 require('oil').setup()
-require('mini.pick').setup()
+require('mini.pick').setup {
+  mappings = {
+    choose_marked = '<C-y>',
+    mark_all = '<C-q>',
+  },
+}
 require('mini.pairs').setup()
 require('mini.extra').setup()
 require('mini.statusline').setup {
