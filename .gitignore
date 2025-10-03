@@ -10,3 +10,10 @@ bin/.local/scripts/tokenpls
 .DS_Store
 
 fish/.config/fish/fish_variables
+
+# I should submodule these at some point
+# or at least make them their own "dotfiles" repo
+sway/
+waybar/
+swaylock/
+mako/

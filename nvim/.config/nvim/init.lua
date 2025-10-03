@@ -26,7 +26,11 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   end,
 })
 
-require('oil').setup()
+require('oil').setup({
+  view_options = {
+    show_hidden = true
+  }
+})
 require('mini.pick').setup {
   mappings = {
     choose_marked = '<C-y>',
@@ -85,5 +89,14 @@ vim.lsp.config('lua_ls', {
   },
 })
 
+if theme.setup then theme.setup() end
+vim.cmd([[set bg=]] .. theme.background)
 vim.cmd([[colorscheme ]] .. theme.colorscheme)
 vim.cmd [[set completeopt+=menuone,noselect,popup]]
+-- transparent background
+vim.cmd [[
+  highlight Normal guibg=none
+  highlight NonText guibg=none
+  highlight Normal ctermbg=none
+  highlight NonText ctermbg=none
+]]

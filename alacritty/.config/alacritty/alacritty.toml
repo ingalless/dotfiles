@@ -2,8 +2,9 @@
 TERM = "screen-256color"
 
 [font]
-size = 18
-offset.y = 6
+size = 13
+offset.y = 4
+offset.x = -1
 
 # [font.bold]
 # style = "Bold"
@@ -13,8 +14,8 @@ offset.y = 6
 # git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
 
 [font.normal]
-family = "Iosevka Nerd Font Mono"
-# family = "JetBrainsMono NF"
+# family = "Iosevka Nerd Font Mono"
+family = "JetBrainsMono NF"
 style = "Regular"
 
 # [[keyboard.bindings]]
@@ -122,13 +123,13 @@ mode = "~Search"
 mods = "Command"
 
 [window]
-# opacity = 0.9
+# opacity = 0.97
 decorations = "Buttonless"
 dynamic_padding = false
 
 [window.padding]
-x = 4
+x = 0
 y = 0
 
 [general]
-import = ["themes/bloodmoon.toml"]
+import = ["~/.config/alacritty/themes/themes/everforest_dark.toml"]
