@@ -6,7 +6,15 @@ tags
 # perhaps through env variables
 bin/.local/scripts/ucptest
 bin/.local/scripts/tokenpls
+bin/.local/scripts/getToken
 
 .DS_Store
 
 fish/.config/fish/fish_variables
+
+# I should submodule these at some point
+# or at least make them their own "dotfiles" repo
+sway/
+waybar/
+swaylock/
+mako/

@@ -4,6 +4,11 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Set a pretty window border
+vim.opt.winborder = 'rounded'
+
+vim.o.swapfile = false
+
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
 
@@ -82,3 +87,6 @@ vim.opt.foldtext = ''
 vim.opt.foldnestmax = 3
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
+
+-- Menu
+vim.o.completeopt = 'menu,menuone'
