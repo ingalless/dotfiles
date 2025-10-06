@@ -17,6 +17,8 @@ vim.pack.add {
   { src = 'https://github.com/tpope/vim-sleuth' },
   { src = 'https://github.com/lewis6991/gitsigns.nvim' },
   { src = 'https://github.com/saghen/blink.cmp', version = 'v1.6.0' },
+  { src = 'https://github.com/davidmh/mdx.nvim' },
+  { src = 'https://gitlab.com/gitlab-org/editor-extensions/gitlab.vim.git' },
 }
 
 vim.api.nvim_create_autocmd('BufWritePre', {
@@ -31,6 +33,7 @@ require('oil').setup({
     show_hidden = true
   }
 })
+require('mdx').setup()
 require('mini.pick').setup {
   mappings = {
     choose_marked = '<C-y>',
@@ -78,7 +81,7 @@ require('gitsigns').setup {
   },
 }
 
-vim.lsp.enable { 'lua_ls', 'ts_ls' }
+vim.lsp.enable { 'lua_ls', 'ts_ls', 'astro', 'mdx' }
 vim.lsp.config('lua_ls', {
   settings = {
     Lua = {
@@ -88,6 +91,23 @@ vim.lsp.config('lua_ls', {
     },
   },
 })
+
+-- Gitlab
+require('gitlab').setup {
+  statusline = {
+    enabled = false,
+  },
+  code_suggestions = {
+    -- For the full list of default languages, see the 'auto_filetypes' array in
+    -- https://gitlab.com/gitlab-org/editor-extensions/gitlab.vim/-/blob/main/lua/gitlab/config/defaults.lua
+    auto_filetypes = { 'javascript', 'typescript' }, -- Default is { 'ruby' }
+    ghost_text = {
+      enabled = true, -- ghost text is an experimental feature
+      accept_suggestion = '<tab>', -- '<tab>'
+      stream = true,
+    },
+  },
+}
 
 if theme.setup then theme.setup() end
 vim.cmd([[set bg=]] .. theme.background)

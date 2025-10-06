@@ -6,6 +6,7 @@ tags
 # perhaps through env variables
 bin/.local/scripts/ucptest
 bin/.local/scripts/tokenpls
+bin/.local/scripts/getToken
 
 .DS_Store
 
