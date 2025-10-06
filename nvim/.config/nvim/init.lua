@@ -7,7 +7,6 @@ vim.cmd ':hi StatusLine guibg=NONE'
 vim.pack.add {
   { src = theme.src },
   { src = 'https://github.com/stevearc/oil.nvim' },
-  { src = 'https://github.com/echasnovski/mini.pick' },
   { src = 'https://github.com/echasnovski/mini.pairs' },
   { src = 'https://github.com/echasnovski/mini.statusline' },
   { src = 'https://github.com/echasnovski/mini.extra' },
@@ -19,6 +18,8 @@ vim.pack.add {
   { src = 'https://github.com/saghen/blink.cmp', version = 'v1.6.0' },
   { src = 'https://github.com/davidmh/mdx.nvim' },
   { src = 'https://gitlab.com/gitlab-org/editor-extensions/gitlab.vim.git' },
+  { src = 'https://github.com/nvim-telescope/telescope.nvim' },
+  { src = 'https://github.com/nvim-lua/plenary.nvim' },
 }
 
 vim.api.nvim_create_autocmd('BufWritePre', {
@@ -28,18 +29,21 @@ vim.api.nvim_create_autocmd('BufWritePre', {
   end,
 })
 
-require('oil').setup({
+require('oil').setup {
   view_options = {
-    show_hidden = true
-  }
-})
-require('mdx').setup()
-require('mini.pick').setup {
-  mappings = {
-    choose_marked = '<C-y>',
-    mark_all = '<C-q>',
+    show_hidden = true,
   },
 }
+require('mdx').setup()
+
+-- telescope
+local builtin = require 'telescope.builtin'
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+-- mini
 require('mini.pairs').setup()
 require('mini.extra').setup()
 require('mini.statusline').setup {
@@ -109,14 +113,9 @@ require('gitlab').setup {
   },
 }
 
-if theme.setup then theme.setup() end
+if theme.setup then
+  theme.setup()
+end
 vim.cmd([[set bg=]] .. theme.background)
 vim.cmd([[colorscheme ]] .. theme.colorscheme)
 vim.cmd [[set completeopt+=menuone,noselect,popup]]
--- transparent background
-vim.cmd [[
-  highlight Normal guibg=none
-  highlight NonText guibg=none
-  highlight Normal ctermbg=none
-  highlight NonText ctermbg=none
-]]
