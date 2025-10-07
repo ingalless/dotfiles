@@ -1,0 +1,34 @@
+-- This file should be created on each environment
+-- `cp overrides.lua.example overrides.lua`
+
+return function ()
+  -- overrides go here.
+end
+
+
+--- EXAMPLE: ---
+-- install additional deps
+-- return function ()
+--   vim.pack.add
+--     { src = 'https://gitlab.com/gitlab-org/editor-extensions/gitlab.vim.git' },
+--   }
+--   
+--   -- configure the dependency
+--   -- Gitlab
+--   require('gitlab').setup {
+--     statusline = {
+--       enabled = false,
+--     },
+--     code_suggestions = {
+--       -- For the full list of default languages, see the 'auto_filetypes' array in
+--       -- https://gitlab.com/gitlab-org/editor-extensions/gitlab.vim/-/blob/main/lua/gitlab/config/defaults.lua
+--       auto_filetypes = { 'javascript', 'typescript' }, -- Default is { 'ruby' }
+--       ghost_text = {
+--         enabled = true, -- ghost text is an experimental feature
+--         accept_suggestion = '<tab>', -- '<tab>'
+--         stream = true,
+--       },
+--     },
+--   }
+-- end
+

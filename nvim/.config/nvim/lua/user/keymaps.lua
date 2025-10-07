@@ -1,3 +1,5 @@
+local builtin = require 'telescope.builtin'
+
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Re-source config
@@ -12,16 +14,14 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- LSP
 vim.keymap.set('n', '<leader>ld', vim.diagnostic.open_float)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
-vim.keymap.set('n', 'grr', function()
-  require('mini.extra').pickers.lsp { scope = 'references' }
-end)
+vim.keymap.set('n', 'grr', builtin.lsp_references)
 
--- MiniPick
-vim.keymap.set('n', '<leader>sf', ':Pick files<CR>')
-vim.keymap.set('n', '<leader>sh', ':Pick help<CR>')
-vim.keymap.set('n', '<leader>sg', ':Pick grep_live<CR>')
-vim.keymap.set('n', '<leader>sd', ':Pick diagnostic<CR>')
-vim.keymap.set('n', '<leader><leader>', ':Pick buffers<CR>')
+-- Telescope
+vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
+vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = 'Telescope buffers' })
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = 'Telescope diagnostics' })
 
 -- Browse files
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open file explorer in current directory' })
