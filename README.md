@@ -35,11 +35,17 @@ stow nvim
 
 ## Fish
 
+### Environment-specific variables
+
 Configure environment-specific variables in `.ji.fish`
 
 ```fish
 set -gx MY_SPECIAL_VAR "some value"
 ```
+
+| Name           | Description                                              |
+| -------------- | -------------------------------------------------------- |
+| TMUX_COPY_TOOL | The copy command to use in tmux (e.g. `pbcopy` on MacOS) |
 
 ## Tools to install
 
