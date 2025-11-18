@@ -9,6 +9,7 @@ vim.pack.add {
   { src = 'https://github.com/echasnovski/mini.pairs' },
   { src = 'https://github.com/echasnovski/mini.statusline' },
   { src = 'https://github.com/echasnovski/mini.extra' },
+  { src = 'https://github.com/echasnovski/mini.surround' },
   { src = 'https://github.com/neovim/nvim-lspconfig' },
   { src = 'https://github.com/nvim-treesitter/nvim-treesitter' },
   { src = 'https://github.com/stevearc/conform.nvim' },
@@ -33,6 +34,7 @@ require('oil').setup {
 }
 -- mini
 require('mini.pairs').setup()
+require('mini.surround').setup()
 require('mini.extra').setup()
 require('mini.statusline').setup {
   use_icons = true,
