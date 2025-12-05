@@ -2,9 +2,9 @@
 TERM = "screen-256color"
 
 [font]
-size = 13
-offset.y = 4
-offset.x = -1
+size = 18
+offset.y = 0
+offset.x = 0
 
 # [font.bold]
 # style = "Bold"
@@ -14,9 +14,9 @@ offset.x = -1
 # git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
 
 [font.normal]
-# family = "Iosevka Nerd Font Mono"
-family = "JetBrainsMono NF"
-style = "Regular"
+family = "Iosevka Nerd Font Mono"
+# family = "JetBrainsMono NF"
+style = "Medium"
 
 # [[keyboard.bindings]]
 # chars = "\u001BOH"

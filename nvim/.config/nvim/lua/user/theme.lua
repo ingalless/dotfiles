@@ -1,12 +1,17 @@
 local themes = {
+  gruvbox = {
+    src = 'https://github.com/ellisonleao/gruvbox.nvim',
+    colorscheme = 'gruvbox',
+    background = 'light',
+  },
+  solarized = {
+    src = 'https://github.com/shaunsingh/solarized.nvim',
+    colorscheme = 'solarized',
+    background = 'light',
+  },
   nightfox = {
     src = 'https://github.com/EdenEast/nightfox.nvim',
     colorscheme = 'nightfox',
-    background = 'dark',
-  },
-  vague = {
-    src = 'https://github.com/vague2k/vague.nvim',
-    colorscheme = 'vague',
     background = 'dark',
   },
   everforest_light = {

@@ -78,6 +78,9 @@ vim.opt.scrolloff = 10
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
 
+-- Disable wrapping
+vim.opt.wrap = false
+
 -- Use treesitter for fold levels
 vim.opt.foldcolumn = '0'
 vim.opt.foldmethod = 'expr'

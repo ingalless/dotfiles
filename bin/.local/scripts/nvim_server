@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+## Sets the background for all running nvim servers
+
+usage="
+Usage: nvim_server <light|dark>
+"
+
+id=$(id -u)
+
+echo "$id"
+servers=$(ls "/run/user/$id/" | grep nvim)
+theme=$1
+
+if [ -z "$theme" ]; then
+  echo "Please provide a theme"
+  echo "$usage"
+  exit 1
+fi
+
+for server in $servers; do
+  nvim --server $server --remote-send ":set background=$theme<CR>"
+done
