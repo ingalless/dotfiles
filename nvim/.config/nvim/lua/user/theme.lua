@@ -1,4 +1,9 @@
 local themes = {
+  catppuccin = {
+    src = 'https://github.com/catppuccin/nvim',
+    colorscheme = 'catppuccin-frappe',
+    background = 'dark',
+  },
   gruvbox = {
     src = 'https://github.com/ellisonleao/gruvbox.nvim',
     colorscheme = 'gruvbox',
@@ -32,4 +37,4 @@ local themes = {
   },
 }
 
-return themes.everforest_dark
+return themes.catppuccin

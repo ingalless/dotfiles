@@ -14,7 +14,7 @@ cd dotfiles
 | OS             | MacOS     |
 | Window Manager | Aerospace |
 | Shell          | Fish      |
-| Terminal       | Alacritty |
+| Terminal       | Ghostty   |
 | Editor         | Neovim    |
 | Multiplexer    | tmux      |
 
