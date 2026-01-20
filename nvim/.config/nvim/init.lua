@@ -19,6 +19,8 @@ vim.pack.add {
   { src = 'https://github.com/catppuccin/nvim' },
   -- tokyo night
   { src = 'https://github.com/folke/tokyonight.nvim' },
+  -- rose pine
+  { src = 'https://github.com/rose-pine/neovim' },
 
   -- plugins
   { src = 'https://github.com/stevearc/oil.nvim' },
@@ -109,7 +111,7 @@ vim.lsp.config('lua_ls', {
 })
 
 vim.cmd([[set bg=]] .. 'dark')
-vim.cmd([[colorscheme ]] .. 'everforest')
+vim.cmd([[colorscheme ]] .. 'catppuccin')
 vim.cmd [[set completeopt+=menuone,noselect,popup]]
 
 require 'user.keymaps'
