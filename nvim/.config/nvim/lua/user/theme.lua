@@ -28,11 +28,11 @@ local themes = {
     end
   },
   everforest_dark = {
-    src = 'https://github.com/sainnhe/everforest',
+    src = 'https://github.com/neanias/everforest',
     colorscheme = 'everforest',
     background = 'dark',
     setup = function()
-      vim.g.everforest_background='hard'
+      require'everforest'.setup({ background = 'soft' })
     end
   },
 }

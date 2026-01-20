@@ -1,10 +1,26 @@
 require 'user.options'
-local theme = require 'user.theme'
 
 vim.cmd ':hi StatusLine guibg=NONE'
 
 vim.pack.add {
-  { src = theme.src },
+  -- themes, from Omarchy
+  -- everforest
+  { src = 'https://github.com/neanias/everforest' },
+  -- nord
+  { src = 'https://github.com/EdenEast/nightfox.nvim' },
+  -- gruvbox
+  { src = 'https://github.com/ellisonleao/gruvbox.nvim' },
+  -- kanagawa
+  { src = 'https://github.com/rebelot/kanagawa.nvim' },
+  -- hackerman
+  { src = 'https://github.com/bjarneo/aether.nvim' },
+  { src = 'https://github.com/bjarneo/hackerman.nvim' },
+  -- catppuccin
+  { src = 'https://github.com/catppuccin/nvim' },
+  -- tokyo night
+  { src = 'https://github.com/folke/tokyonight.nvim' },
+
+  -- plugins
   { src = 'https://github.com/stevearc/oil.nvim' },
   { src = 'https://github.com/echasnovski/mini.pairs' },
   { src = 'https://github.com/echasnovski/mini.statusline' },
@@ -41,11 +57,7 @@ require('mini.statusline').setup {
 }
 
 ---@diagnostic disable-next-line: missing-fields
-require('nvim-treesitter.configs').setup {
-  auto_install = false,
-  ensure_installed = { 'typescript', 'javascript', 'lua' },
-  highlight = { enable = true },
-}
+require('nvim-treesitter').install { 'typescript', 'javascript', 'lua' }
 require('conform').setup {
   formatters_by_ft = {
     typescript = { 'prettier' },
@@ -85,7 +97,7 @@ require('gitsigns').setup {
   },
 }
 
-vim.lsp.enable { 'lua_ls', 'ts_ls', 'astro', 'mdx' }
+vim.lsp.enable { 'lua_ls', 'ts_ls' }
 vim.lsp.config('lua_ls', {
   settings = {
     Lua = {
@@ -96,11 +108,8 @@ vim.lsp.config('lua_ls', {
   },
 })
 
-if theme.setup then
-  theme.setup()
-end
-vim.cmd([[set bg=]] .. theme.background)
-vim.cmd([[colorscheme ]] .. theme.colorscheme)
+vim.cmd([[set bg=]] .. 'dark')
+vim.cmd([[colorscheme ]] .. 'everforest')
 vim.cmd [[set completeopt+=menuone,noselect,popup]]
 
 require 'user.keymaps'
