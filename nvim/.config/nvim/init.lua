@@ -1,4 +1,5 @@
 require 'user.options'
+local theme = require 'user.themes'
 
 vim.cmd ':hi StatusLine guibg=NONE'
 
@@ -12,15 +13,16 @@ vim.pack.add {
   { src = 'https://github.com/ellisonleao/gruvbox.nvim' },
   -- kanagawa
   { src = 'https://github.com/rebelot/kanagawa.nvim' },
-  -- hackerman
-  { src = 'https://github.com/bjarneo/aether.nvim' },
-  { src = 'https://github.com/bjarneo/hackerman.nvim' },
   -- catppuccin
   { src = 'https://github.com/catppuccin/nvim' },
-  -- tokyo night
+  -- tokyonight
   { src = 'https://github.com/folke/tokyonight.nvim' },
   -- rose pine
   { src = 'https://github.com/rose-pine/neovim' },
+  -- flexoki
+  { src = 'https://github.com/kepano/flexoki-neovim' },
+  -- monokai (ristretto)
+  { src = 'https://github.com/gthelding/monokai-pro.nvim' },
 
   -- plugins
   { src = 'https://github.com/stevearc/oil.nvim' },
@@ -110,8 +112,11 @@ vim.lsp.config('lua_ls', {
   },
 })
 
-vim.cmd([[set bg=]] .. 'dark')
-vim.cmd([[colorscheme ]] .. 'catppuccin')
+if theme.setup then
+  theme.setup()
+end
+vim.cmd([[set bg=]] .. theme.background)
+vim.cmd([[colorscheme ]] .. theme.colorscheme)
 vim.cmd [[set completeopt+=menuone,noselect,popup]]
 
 require 'user.keymaps'
