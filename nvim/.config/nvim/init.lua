@@ -60,8 +60,6 @@ require('mini.statusline').setup {
   use_icons = true,
 }
 
----@diagnostic disable-next-line: missing-fields
-require('nvim-treesitter').install { 'typescript', 'javascript', 'lua' }
 require('conform').setup {
   formatters_by_ft = {
     typescript = { 'prettier' },
