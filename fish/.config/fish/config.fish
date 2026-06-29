@@ -1,6 +1,8 @@
 set -gx EDITOR 'nvim'
 set -gx MANWIDTH 120
 set -g fish_greeting
+set -gx TODO_FILE "$HOME/work/notes/todo.txt"
+set -gx DONE_FILE "$HOME/work/notes/done.txt"
 
 # abbr --add zs "zed-sessionizer"
 alias v "nvim"
@@ -17,6 +19,7 @@ alias ll "eza -lh"
 alias tree "eza -aT"
 alias lg "lazygit"
 alias gdone "git-close-branch"
+alias t "tuxedo"
 
 abbr --add v. "nvim ."
 abbr --add art "php artisan"
@@ -35,6 +38,7 @@ abbr --add gd "git diff"
 abbr --add gb "git branch"
 abbr --add gp "git push"
 abbr --add gst "git status"
+abbr --add gco "git checkout"
 
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/.local/scripts

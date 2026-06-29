@@ -62,8 +62,8 @@ require('mini.statusline').setup {
 
 require('conform').setup {
   formatters_by_ft = {
-    typescript = { 'prettier' },
-    javascript = { 'prettier' },
+    -- typescript = { 'prettier' },
+    -- javascript = { 'prettier' },
     markdown = { 'prettier' },
     lua = { 'stylua' },
   },
@@ -99,7 +99,7 @@ require('gitsigns').setup {
   },
 }
 
-vim.lsp.enable { 'lua_ls', 'ts_ls' }
+vim.lsp.enable { 'lua_ls', 'tsgo' }
 vim.lsp.config('lua_ls', {
   settings = {
     Lua = {

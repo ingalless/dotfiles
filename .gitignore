@@ -7,6 +7,12 @@ tags
 bin/.local/scripts/ucptest
 bin/.local/scripts/tokenpls
 bin/.local/scripts/getToken
+bin/.local/scripts/ado
+
+# Other "bin" files
+bin/.local/share/
+bin/.local/state/
+bin/.local/bin/
 
 .DS_Store
 

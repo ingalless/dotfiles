@@ -57,4 +57,4 @@ local themes = {
   },
 }
 
-return themes.ristretto
+return themes.gruvbox
